@@ -16,7 +16,7 @@ export async function POST(req: Request) {
     // Format previous messages as context
     let contextString = "";
     if (history.length > 0) {
-      history.forEach((msg: any, index: number) => {
+      history.forEach((msg: any) => {
         if (msg.role === "user") {
           contextString += `User: ${msg.content}\n`;
         } else if (msg.role === "assistant") {
